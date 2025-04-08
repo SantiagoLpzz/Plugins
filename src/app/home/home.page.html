@@ -1,20 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Device Info</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <strong>Device Name:</strong> {{ deviceInfo.name || 'Unknown' }}<br>
+    <strong>Platform:</strong> {{ deviceInfo.platform || 'Unknown' }}<br>
+    <strong>Network Type:</strong> {{ networkType }}<br>
+
+    <ion-button (click)="getDeviceInfo()">Refrescar info del dispositivo</ion-button>
   </div>
 </ion-content>
